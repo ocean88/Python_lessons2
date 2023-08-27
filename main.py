@@ -1,16 +1,47 @@
-# This is a sample Python script.
+print("""Привет! Предлагаю проверить свои знания английского!
+ Расскажи, как тебя зовут!""")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+username = str(input())
+print(f"Привет, {username}, начинаем тренировку!")
 
+correct_answers = 0
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print("My name ___ Vova")
+question1 = str(input())
+if question1 == "is":
+    correct_answers += 1
+    print("""Ответ верный!
+Вы получаете 10 баллов!""")
+else:
+    print("""Неправильно.
+Правильный ответ: is""")
 
+print("I ___ a coder")
+question1 = str(input())
+if question1 == "am":
+    correct_answers += 1
+    print("""Ответ верный!
+Вы получаете 10 баллов!""")
+else:
+    print("""Неправильно.
+Правильный ответ: am""")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm1')
+print("I live ___ Moscow")
+question1 = str(input())
+if question1 == "in":
+    correct_answers += 1
+    print("""Ответ верный!
+Вы получаете 10 баллов!""")
+else:
+    print("""Неправильно.
+Правильный ответ: in""")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+resultscore = correct_answers * 10
+resultpercent = round(correct_answers / 3* 100)
+
+print(f"""Вот и все, {username}\! 
+ Вы ответили на {correct_answers} вопросов из 3 верно.
+
+Вы заработали {resultscore} баллов.
+ Это {resultpercent} процентов.""")
+
