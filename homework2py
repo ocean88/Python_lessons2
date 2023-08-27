@@ -1,14 +1,15 @@
+#Приветствие
 print("""Привет! Предлагаю проверить свои знания английского!
  Расскажи, как тебя зовут!""")
 
-username = str(input())
-print(f"Привет, {username}, начинаем тренировку!")
+username = str(input())  #Спрашиваем имя пользователя
+print(f"Привет, {username}, начинаем тренировку!") # Выводим сообщение с именем пользователя и о начале тренировки
 
-correct_answers = 0
+correct_answers = 0 #Счетчик правильных ответов
 
-print("My name ___ Vova")
-question1 = str(input())
-if question1 == "is":
+print("My name ___ Vova") #Задаем вопрос
+question1 = str(input())   #заносим в переменную результат ввода
+if question1 == "is":       #Проверяем правильный ли ответ введен выводим сообщение в двух вариантах + добавляем счетчик+1 если ответ правильный
     correct_answers += 1
     print("""Ответ верный!
 Вы получаете 10 баллов!""")
@@ -16,7 +17,7 @@ else:
     print("""Неправильно.
 Правильный ответ: is""")
 
-print("I ___ a coder")
+print("I ___ a coder")    #Повторяем 2-3 вопрос по аналогии 1
 question1 = str(input())
 if question1 == "am":
     correct_answers += 1
@@ -36,10 +37,11 @@ else:
     print("""Неправильно.
 Правильный ответ: in""")
 
-resultscore = correct_answers * 10
-resultpercent = round(correct_answers / 3* 100)
 
-print(f"""Вот и все, {username}\! 
+resultscore = correct_answers * 10      #Высчитываем количество баллов на основе счетчика умножив на 10
+resultpercent = round(correct_answers / 3* 100) #Выводим % правильных ответов через формулу.
+
+print(f"""Вот и все, {username}!    #Выводим последнее сообщение используя F-строку чтобы переменные работали внутри текста!
  Вы ответили на {correct_answers} вопросов из 3 верно.
 
 Вы заработали {resultscore} баллов.
